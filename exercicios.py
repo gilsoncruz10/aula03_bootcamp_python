@@ -4,6 +4,7 @@
 # Escreva um programa que verifique esses campos e imprima "Dados válidos" se ambos 
 # forem positivos ou "Dados inválidos" caso contrário.
 
+'''
 try:
     quantidade = 10
     preco = -10
@@ -41,7 +42,7 @@ except NameError as a:
 # except SyntaxError as b:  # Este erro não funciona porque ele é avaliado antes do código rodar, então não entra no try-except
 #    print("Erro: Você tentou usar uma variável não definida.")  # Mensagem mais clara
 #    print("Detalhes do erro:", b)  # Exibe a mensagem real do erro
-
+'''
 
 
 
@@ -49,6 +50,23 @@ except NameError as a:
 # Imagine que você está trabalhando com dados de sensores IoT. 
 # Os dados incluem medições de temperatura. Você precisa classificar cada leitura 
 # como 'Baixa', 'Normal' ou 'Alta'. Considerando que:
+
+# o que vou fazer:
+# - entrar temperatura
+# - verificar se temperatura está em cada faixa
+# - printar como temperatura foi classificada
+
+temp = 14
+
+if temp < 15:
+    print("temperatura está baixa:", temp, "oC.")
+
+elif temp <= 30:
+    print("temperatura está normal:", temp, "oC.")
+
+else:
+    print("temperatura está alta:", temp, "oC.")
+
 
 ### Exercício 3: Filtragem de Logs por Severidade
 # Você está analisando logs de uma aplicação e precisa filtrar mensagens 
