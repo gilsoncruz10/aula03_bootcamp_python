@@ -55,7 +55,7 @@ except NameError as a:
 # - entrar temperatura
 # - verificar se temperatura está em cada faixa
 # - printar como temperatura foi classificada
-
+'''
 temp = 14
 
 if temp < 15:
@@ -66,13 +66,23 @@ elif temp <= 30:
 
 else:
     print("temperatura está alta:", temp, "oC.")
-
+'''
 
 ### Exercício 3: Filtragem de Logs por Severidade
 # Você está analisando logs de uma aplicação e precisa filtrar mensagens 
 # com severidade 'ERROR'. Dado um registro de log em formato de dicionário 
 # como `log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}`, 
 # escreva um programa que imprima a mensagem se a severidade for 'ERROR'.
+
+
+log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}
+if log.get('level') == 'ERROR':
+    print("Log de ERRO encontrado!")
+    print("Ocorrência em:", log['timestamp'])
+    print("Mensagem:", log['message'])
+else:
+    print("Nenhum log de ERRO encontradO.")
+
 
 ### Exercício 4: Validação de Dados de Entrada
 # Antes de processar os dados de usuários em um sistema de recomendação, 
