@@ -92,6 +92,7 @@ else:
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
 
 # usuarios = {'nome' : 'Paulo', 'idade' : '35'}
+'''
 nome = "Paulo"
 email = "paulo@seuemail.com"
 idade = 66
@@ -103,9 +104,7 @@ elif idade < 18 or idade > 65:
     print("idade fora do intervalo válido")
 else:
     print("Dados válidos.")
-
-
-
+'''
 
 
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
@@ -113,6 +112,17 @@ else:
 # transações suspeitas. Uma transação é considerada suspeita se o valor for superior 
 # a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). 
 # Dada uma transação como `transacao = {'valor': 12000, 'hora': 20}`, verifique se ela é suspeita.
+
+transacao = {'valor': 12000, 'hora': 20}
+if transacao["valor"] > 10000 and not 9 <= transacao["hora"] <= 18:
+    print("Transação suspeita. Valor acima do limite de R$ 10.000 e Horário fora do intevalo entre 9h e 18h.")
+elif transacao["valor"] > 10000:
+    print("Transação suspeita. Valor acima do limite de R$ 10.000.")
+elif not 9 <= transacao["hora"] <= 18:
+    print("Transação suspeita. Horário fora do intevalo entre 9h e 18h.")
+else:
+    print("Transação válida.")
+
 
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
