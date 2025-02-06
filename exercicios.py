@@ -112,7 +112,7 @@ else:
 # transações suspeitas. Uma transação é considerada suspeita se o valor for superior 
 # a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). 
 # Dada uma transação como `transacao = {'valor': 12000, 'hora': 20}`, verifique se ela é suspeita.
-
+'''
 transacao = {'valor': 12000, 'hora': 20}
 if transacao["valor"] > 10000 and not 9 <= transacao["hora"] <= 18:
     print("Transação suspeita. Valor acima do limite de R$ 10.000 e Horário fora do intevalo entre 9h e 18h.")
@@ -122,10 +122,28 @@ elif not 9 <= transacao["hora"] <= 18:
     print("Transação suspeita. Horário fora do intevalo entre 9h e 18h.")
 else:
     print("Transação válida.")
-
+'''
 
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
+
+texto = "hoje tem bootcamp e é um bootcamp de python e nem eu nem voce nem ninguém falha"
+
+palavras = texto.split()
+
+print(palavras)
+
+# eu quero percorrer cada palavra em palavras e verificar se ela já existe em contagem de palavras
+
+contagem_de_palavras = {}
+
+for palavra in palavras:
+    if palavra in contagem_de_palavras:
+        contagem_de_palavras[palavra] += 1
+    else:
+        contagem_de_palavras[palavra] = 1
+
+print(contagem_de_palavras)
 
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
