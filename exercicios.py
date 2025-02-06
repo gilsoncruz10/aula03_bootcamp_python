@@ -126,7 +126,7 @@ else:
 
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
-
+'''
 texto = "hoje tem bootcamp e é um bootcamp de python e nem eu nem voce nem ninguém falha"
 
 palavras = texto.split()
@@ -144,9 +144,42 @@ for palavra in palavras:
         contagem_de_palavras[palavra] = 1
 
 print(contagem_de_palavras)
+'''
+
 
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
+
+numeros = [10, 20, 30, 40, 50, 60, 70]
+minimo = min(numeros)
+maximo = max(numeros)
+normalizados = []
+for x in numeros:
+    arredondados = round(((x - minimo) / (maximo - minimo)), 2)
+    normalizados.append(arredondados)
+
+print("mínimo:", minimo)
+print("máximo:", maximo)
+print("lista normalizada:", normalizados)
+
+numeros_2 = [15, 30, 45, 60]
+minimo2 = min(numeros_2)
+maximo2 = max(numeros_2)
+normalizados_2 = [round(((x - minimo2) / (maximo2 - minimo2)), 2) for x in numeros_2]
+
+
+print("mínimo 2:", minimo2)
+print("máximo 2:", maximo2)
+print("lista normalizada 2:", normalizados_2)
+
+'''
+numeros = [10, 20, 30, 40, 50, 60, 70]
+minimo = min(numeros)
+maximo = max(numeros)
+normalizados = [(x - minimo) / (maximo - minimo) for x in numeros]
+
+print(normalizados)
+'''
 
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
