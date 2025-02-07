@@ -150,6 +150,8 @@ print(contagem_de_palavras)
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
 
+'''
+#  SEM LIST COMPREHENSION
 numeros = [10, 20, 30, 40, 50, 60, 70]
 minimo = min(numeros)
 maximo = max(numeros)
@@ -162,6 +164,7 @@ print("mínimo:", minimo)
 print("máximo:", maximo)
 print("lista normalizada:", normalizados)
 
+#COM LIST COMPREHENSION
 numeros_2 = [15, 30, 45, 60]
 minimo2 = min(numeros_2)
 maximo2 = max(numeros_2)
@@ -171,6 +174,8 @@ normalizados_2 = [round(((x - minimo2) / (maximo2 - minimo2)), 2) for x in numer
 print("mínimo 2:", minimo2)
 print("máximo 2:", maximo2)
 print("lista normalizada 2:", normalizados_2)
+
+'''
 
 '''
 numeros = [10, 20, 30, 40, 50, 60, 70]
@@ -183,6 +188,39 @@ print(normalizados)
 
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
+
+usuarios = [
+    {"nome": "Alice", "email": "alice@example.com"},
+    {"nome": "Bob", "email": ""},
+    {"nome": "Carol", "email": "carol@example.com"},
+    {"nome": "Marcus", "email": ""},
+    {"nome": "Jose", "email": "jose@exemple.com"},
+    {"nome": "Silvia", "email": "silvia@exemplo"},
+    {"nome": "", "email": "carlos.silva"}
+]
+
+usuarios_incompletos = []
+
+for usuario in usuarios:
+    if usuario["nome"] == "" or ("@" not in usuario["email"] or "." not in usuario["email"]):
+        usuarios_incompletos.append(usuario)
+print(usuarios_incompletos)
+
+
+
+'''
+
+for len(usuarios["nome"]) = 0:
+    usuarios_incompletos.append(usuarios)
+
+for len(usuarios["nome"]) != 0:
+    if "@" not in usuarios["email"]:
+    usuarios_incompletos.append(usuarios)
+
+print(usuarios_incompletos)
+
+'''
+
 
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
