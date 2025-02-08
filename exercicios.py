@@ -224,7 +224,7 @@ print("números pares", numeros_pares)
 
 ### Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
-
+'''
 vendas = [
     {"categoria": "eletrônicos", "valor": 1200},
     {"categoria": "livros", "valor": 200},
@@ -243,13 +243,47 @@ for venda in vendas:
         total_por_categoria[categoria] = total
 
 print(total_por_categoria)
-
+'''
 
 
 ### Exercícios com WHILE
 
 ### Exercício 11. Leitura de Dados até Flag
 # Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
+
+# FAZENDO DO MODO SIMPLES:
+'''
+dados = []
+entrada = ""
+
+while entrada.lower() != "sair":
+    entrada = input("digite um número ou SAIR: ")
+    if entrada.lower() == "sair":
+        print("programa encerrado")
+        print("lista final de dados:", dados)
+    else:
+        dados.append(entrada)
+        print("lista atualizada de dados:", dados)
+'''
+
+# FAZENDO COM TRY-EXCEPT:
+dados = []
+entrada = ""
+
+while True:
+    entrada = input("Digite um número inteiro ou SAIR: ")
+    
+    if entrada.lower() == "sair":
+        print("Programa encerrado.")
+        print("Lista final de dados:", dados)
+        break  # Encerra o loop
+
+    try:
+        numero = int(entrada)  # Converte para inteiro
+        dados.append(numero)  # Adiciona apenas se for um número válido
+        print("Lista atualizada de dados:", dados)
+    except ValueError:
+        print("Entrada inválida! Por favor, digite apenas números inteiros ou 'SAIR'.")
 
 ### Exercício 12. Validação de Entrada
 # Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
